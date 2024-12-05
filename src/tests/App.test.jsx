@@ -24,7 +24,8 @@ describe("App", () => {
   });
   it("esegue il cambio di colore dopo il click", () => {
     render(<SingleBook />);
-    const card = screen.getAllByTestId(Ciao);
+    const card = screen.get(Ciao);
+    fireEvent.click(card);
     fireEvent.click(card);
   });
 });
